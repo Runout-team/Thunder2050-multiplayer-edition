@@ -1,10 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CursorManager
     - GameManager
     - InputManger
     - Loading
-    - Pause
     - PlayerLook
     - PlayerMotor
     Unity.InputSystem.dll:
@@ -25,8 +25,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -99,8 +101,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -108,35 +108,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 1730}
+      Script: {instanceID: 1732}
     - Class: 114
       Script: {instanceID: 2266}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3320}
     - Class: 114
-      Script: {instanceID: 4490}
+      Script: {instanceID: 4492}
     - Class: 114
-      Script: {instanceID: 4504}
+      Script: {instanceID: 4506}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5404}
     - Class: 114
-      Script: {instanceID: 5532}
+      Script: {instanceID: 5534}
     - Class: 114
-      Script: {instanceID: 5542}
+      Script: {instanceID: 5544}
     - Class: 114
-      Script: {instanceID: 5636}
+      Script: {instanceID: 5638}
     - Class: 114
-      Script: {instanceID: 6290}
+      Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 6460}
+      Script: {instanceID: 6466}
     - Class: 114
-      Script: {instanceID: 6838}
+      Script: {instanceID: 6844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -176,8 +176,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -187,27 +185,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3320}
     - Class: 114
-      Script: {instanceID: 5636}
+      Script: {instanceID: 4098}
     - Class: 114
-      Script: {instanceID: 6290}
+      Script: {instanceID: 4452}
     - Class: 114
-      Script: {instanceID: 6460}
+      Script: {instanceID: 5638}
     - Class: 114
-      Script: {instanceID: 6822}
+      Script: {instanceID: 5970}
     - Class: 114
-      Script: {instanceID: 6838}
+      Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 25702}
+      Script: {instanceID: 6466}
     - Class: 114
-      Script: {instanceID: 25710}
+      Script: {instanceID: 6844}
     - Class: 114
-      Script: {instanceID: 26896}
+      Script: {instanceID: 29502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -593,6 +591,12 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
+      Hash: 2896aa52a36ea7764d81940f9949d1e7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMotor
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -657,6 +661,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: cd88e0557c35a209da67c8e396ef3187
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerLook
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -809,7 +819,7 @@ ScriptsOnlyBuild:
     className: GlobalMessageListener
   - hash:
       serializedVersion: 2
-      Hash: db994c1e000b56ffcb0fcdedbb484ac9
+      Hash: 0688e4c5a3f882fe6fd9aa8eb7755e83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Loading
@@ -851,6 +861,12 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
+      Hash: e7a7d25e53d047e3b488ffb404f7c1a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealth
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -867,6 +883,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputManger
   - hash:
       serializedVersion: 2
       Hash: d85b490177c3124d2335460060a2b807
@@ -1217,30 +1239,24 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9e2e1202073c88e1fdb0e125515dc553
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CursorManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: InputManger
+    className: SCRModels
   - hash:
       serializedVersion: 2
-      Hash: da6d44683ccf0d39a8ee578655f68dae
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerMotor
-  - hash:
-      serializedVersion: 2
-      Hash: cd88e0557c35a209da67c8e396ef3187
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerLook
-  - hash:
-      serializedVersion: 2
-      Hash: e7a7d25e53d047e3b488ffb404f7c1a9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerHealth
+    className: SCRWeaponController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Landing.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/sansw/Documents/Thunder20505test build 4/Thunder 2050 (Testing).exe
+  playerPath: C:/Users/sansw/Documents/Thunder20505test build 5/Thunder 2050 (Testing).exe

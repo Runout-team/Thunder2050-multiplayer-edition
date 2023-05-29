@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text IDDisplay;
     void Start()
     {
+        Time.timeScale = 1f;
+
         string id = PlayerPrefs.GetString("id");
         string username = PlayerPrefs.GetString("username");
         UsernameDisplay.text = "Login as " + username;

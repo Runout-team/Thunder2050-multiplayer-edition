@@ -7,8 +7,8 @@ using TMPro;
 
 public class Loading : MonoBehaviour
 {
-    public float speed;
     public Slider ProgressBar;
+    public GameObject ProgressBarObj;
     public TMP_Text StatusMessage;
     public TMP_InputField Userinput;
     public TMP_InputField PWinput;
@@ -41,18 +41,17 @@ public class Loading : MonoBehaviour
         }
     }
     void Startloadscene() {
-        IEnumerator load() {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(1);
-            
-            while(!operation.isDone)
-            {
-                float progressValue = Mathf.Clamp01(operation.progress / speed);
-                ProgressBar.value = progressValue;
-                yield return null;
-            }
+        ProgressBarObj.SetActive(true);
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene() {
+        AsyncOperation op = SceneManager.LoadSceneAsync(1);
+        while (true) {
+            float progressValue = Mathf.Clamp01(op.progress / 0.9f);
+            ProgressBar.value = progressValue;
+            yield return null;
         }
-        StatusMessage.text = "loading...";
-        StartCoroutine(load());
     }
 
     public class LoginDataClass

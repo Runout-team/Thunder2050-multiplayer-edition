@@ -1,27 +1,82 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+    public float WalkSpeed = 5f;
+    public float SprintSpeed = 10f;
+    public float CrouchSpeed = 3f;
+    public float CrouchGravity = -100f;
+    public float DefaultGravity = -50f;
+    public float CrouchJumpHeight = 0.5f;
+    public float DefaultJumpHeight = 1f;
+
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool isGrounded;
-    public float speed = 5f;
-    public float gravity = -9.8f;
-    public float jumpHeight = 3f;
-    
+    private float crouchTimer;
+    private bool lerpCrouch;
+    private bool crouching;
+    private bool sprinting;
+    private float gravity;
+    private float speed;
+    private float jumpHeight;
+
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        speed = WalkSpeed;
+        gravity = DefaultGravity;
+        jumpHeight = DefaultJumpHeight;
     }
 
     // Update is called once per frame
     void Update()
     {
         isGrounded = controller.isGrounded;
+        if (lerpCrouch) {
+            crouchTimer += Time.deltaTime;
+            float p = crouchTimer / 1;
+            p *= p;
+            if (crouching) {
+                controller.height = Mathf.Lerp(controller.height, 1, p);
+            } else {
+                controller.height = Mathf.Lerp(controller.height, 2, p);
+            }
+
+            if (p > 1) {
+                lerpCrouch = false;
+                crouchTimer = 0f;
+            }
+        }
+    }
+
+    public void Crouch() {
+        crouching = !crouching;
+        crouchTimer = 0;
+        lerpCrouch = true;
+        if (crouching) {
+            speed = CrouchSpeed;
+            gravity = CrouchGravity;
+            jumpHeight = CrouchJumpHeight;
+        } else {
+            speed = WalkSpeed;
+            gravity = DefaultGravity;
+            jumpHeight = DefaultJumpHeight;
+        }
+    }
+
+    public void Sprint() {
+        sprinting = !sprinting;
+        if (sprinting && !crouching) {
+            speed = SprintSpeed;
+        } else if (sprinting && crouching){
+            speed = CrouchSpeed;
+        } else {
+            speed = WalkSpeed;
+        }
+            
     }
 
     public void ProcessMove(Vector2 input) {

@@ -322,6 +322,8 @@
 "Assets/Scripts/Gun.cs"
 "Assets/Scripts/InputManger.cs"
 "Assets/Scripts/LandingScripts/Loading.cs"
+"Assets/Scripts/MainScreen/LoginAS.cs"
+"Assets/Scripts/MainScreen/MainMenu.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/PlayerLook.cs"
 "Assets/Scripts/PlayerMotor.cs"
@@ -331,7 +333,7 @@
 "Assets/SMC Pack 1/Demo/DemoAssets/V_SMC_Handler.cs"
 "Assets/SMC Pack 1/Demo/DemoAssets/V_Text.cs"
 -langversion:9.0
-
+/unsafe+
 /deterministic
 /optimize-
 /debug:portable

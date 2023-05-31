@@ -7,6 +7,8 @@ ScriptsOnlyBuild:
     - GunData
     - InputManger
     - Loading
+    - LoginAS
+    - MainMenu
     - PlayerLook
     - PlayerMotor
     - PlayerShoot
@@ -123,31 +125,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1732}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3320}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 4492}
+      Script: {instanceID: 4496}
     - Class: 114
-      Script: {instanceID: 4506}
+      Script: {instanceID: 4510}
     - Class: 114
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5406}
+      Script: {instanceID: 5408}
     - Class: 114
-      Script: {instanceID: 5536}
+      Script: {instanceID: 5538}
     - Class: 114
-      Script: {instanceID: 5546}
+      Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5640}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 6298}
+      Script: {instanceID: 6300}
     - Class: 114
-      Script: {instanceID: 6468}
+      Script: {instanceID: 6470}
     - Class: 114
       Script: {instanceID: 6846}
     - Class: 115
@@ -200,40 +202,99 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2566}
+      Script: {instanceID: 2018}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2568}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 3320}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 4098}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 4452}
+      Script: {instanceID: 3716}
     - Class: 114
-      Script: {instanceID: 5640}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 4456}
     - Class: 114
-      Script: {instanceID: 6298}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 6468}
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6300}
+    - Class: 114
+      Script: {instanceID: 6470}
     - Class: 114
       Script: {instanceID: 6846}
     - Class: 114
+      Script: {instanceID: 7284}
+    - Class: 114
       Script: {instanceID: 8566}
-    - Class: 114
-      Script: {instanceID: 41964}
-    - Class: 114
-      Script: {instanceID: 46608}
-    - Class: 114
-      Script: {instanceID: 46616}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 143
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1596}
+    - Class: 114
+      Script: {instanceID: 2760}
+    - Class: 114
+      Script: {instanceID: 2994}
+    - Class: 114
+      Script: {instanceID: 3322}
+    - Class: 114
+      Script: {instanceID: 5548}
+    - Class: 114
+      Script: {instanceID: 5642}
+    - Class: 114
+      Script: {instanceID: 6300}
+    - Class: 114
+      Script: {instanceID: 6470}
+    - Class: 114
+      Script: {instanceID: 6846}
+    - Class: 114
+      Script: {instanceID: 26782}
+    - Class: 114
+      Script: {instanceID: 27450}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -320,6 +381,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7abf557e42075cd2f9eb50d9c5e23b3e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GunData
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -563,6 +630,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerShoot
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
@@ -682,7 +755,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 20ef1ee2799b81ca6028e40ef8443a20
+      Hash: 663e2465e1e3918dc37a359b272308bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerLook
@@ -1042,6 +1115,12 @@ ScriptsOnlyBuild:
     className: InputActionReference
   - hash:
       serializedVersion: 2
+      Hash: 5b973ffb44e4d773a4e8667ea8ae8e00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gun
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1258,24 +1337,19 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e06acc6ffa4ef16ba8cb75ef1aa9f770
+      Hash: b747dd1789e45d2240d09730d74ba0d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GunData
+    className: LoginAS
   - hash:
       serializedVersion: 2
-      Hash: 5b973ffb44e4d773a4e8667ea8ae8e00
+      Hash: b50edf46b4fcb20a3e5aeffed3ab2743
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Gun
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerShoot
+    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Landing.unity
+  - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/sansw/Documents/Thunder20505test build 6/Thunder 2050 (Testing).exe
+  playerPath: C:/Users/sansw/Documents/Thunder20505test build 7/Thunder 2050 (Testing).exe

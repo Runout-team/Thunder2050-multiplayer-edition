@@ -12,12 +12,24 @@ public class Gun : MonoBehaviour {
 
     public TMP_Text AmmoDisplay;
     public TMP_Text ObjectnameDisplay;
-    
+
+    private bool isRecoiling = false;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+
+    private float recoilTimer = 0f;
+
+
     float timeSinceLastShot;
 
     private void Start() {
+        AmmoDisplay.text = "Ammo: " + gunData.currentAmmo + "/" + gunData.magSize;
+
         PlayerShoot.shootInput += Shoot;
         PlayerShoot.reloadInput += StartReload;
+
+        originalPosition = transform.localPosition;
+        originalRotation = transform.localRotation;
     }
 
     private bool CanShoot() => !gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f);
@@ -37,20 +49,43 @@ public class Gun : MonoBehaviour {
 
         gunData.reloading = false;
         AmmoDisplay.text = "Ammo: " + gunData.currentAmmo + "/" + gunData.magSize;
+
     }
 
-    private void Shoot() {
-        AmmoDisplay.text = "Ammo: " + gunData.currentAmmo + "/" + gunData.magSize;
-        if (gunData.currentAmmo > 0) {
-            if (CanShoot()) {
-                if (Physics.Raycast(muzzle.position, muzzle.forward, out RaycastHit hitInfo, gunData.maxDistance)){
-                    //Debug.Log(hitInfo.transform.name);
-                    ObjectnameDisplay.text = hitInfo.transform.name;
-                }
+    public void Shoot() {
+        GunData.ModeOptions mode = gunData.mode;
 
-                gunData.currentAmmo--;
-                timeSinceLastShot = 0;
-                OnGunShot();
+        AmmoDisplay.text = "Ammo: " + gunData.currentAmmo + "/" + gunData.magSize;
+        if (mode.ToString() != "Safe") {
+            if (gunData.currentAmmo > 0) {
+                if (CanShoot()) {
+                    if (Physics.Raycast(muzzle.position, muzzle.forward, out RaycastHit hitInfo, gunData.maxDistance)){
+                        //Debug.Log(hitInfo.transform.name);
+                        ObjectnameDisplay.text = hitInfo.transform.name;
+                    }
+
+                    if (!isRecoiling)
+                    {
+                        // Apply recoil force
+                        Rigidbody rb = GetComponent<Rigidbody>();
+                        if (rb != null)
+                        {
+                            rb.AddForce(-transform.forward * gunData.recoilForce, ForceMode.Impulse);
+                        }
+
+                        // Apply recoil rotation
+                        transform.Rotate(Vector3.up, -gunData.recoilRotation);
+
+                        // Set recoil duration
+                        gunData.recoilDuration = 0.1f;
+
+                        isRecoiling = true;
+                    }
+
+                    gunData.currentAmmo--;
+                    timeSinceLastShot = 0;
+                    OnGunShot();
+                }
             }
         }
     }
@@ -59,6 +94,29 @@ public class Gun : MonoBehaviour {
         timeSinceLastShot += Time.deltaTime;
 
         Debug.DrawRay(muzzle.position, muzzle.forward);
+
+        if (isRecoiling)
+        {
+            recoilTimer += Time.deltaTime;
+
+            // Calculate recoil interpolation value
+            float t = recoilTimer / gunData.recoilDuration;
+
+            // Smoothly interpolate position
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition, t);
+
+            // Smoothly interpolate rotation
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, originalRotation, t);
+
+            if (recoilTimer >= gunData.recoilDuration)
+            {
+                // Reset position and rotation after recoil
+                transform.localPosition = originalPosition;
+                transform.localRotation = originalRotation;
+                isRecoiling = false;
+                recoilTimer = 0f;
+            }
+        }
     }
 
     private void OnGunShot() {  }

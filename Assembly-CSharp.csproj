@@ -40,7 +40,9 @@
      <Compile Include="Assets\Scripts\ScriptableObject\GunData.cs" />
      <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\LoginAS.cs" />
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+     <Compile Include="Assets\Scripts\MainScreen\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerMotor.cs" />
      <Compile Include="Assets\Scripts\PlayerLook.cs" />
      <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
@@ -50,8 +52,6 @@
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
      <Compile Include="Assets\Scripts\CursorManager.cs" />
-     <Compile Include="Assets\Scripts\MainScreen\LoginAS.cs" />
-     <Compile Include="Assets\Scripts\MainScreen\MainMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

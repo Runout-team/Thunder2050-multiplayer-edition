@@ -1,4 +1,4 @@
-# Thunder-2050
+# Thunder2050 multiplayer edition
 this edition is no any story. In this version of Thunder-2050, the emphasis is on the cross platform (e.g. Android <-> IOS <-> PC).
 
 # How to play

@@ -15,12 +15,11 @@ MonoBehaviour:
   name: M4
   damage: 20
   maxDistance: 200
-  currentAmmo: 50
+  currentAmmo: 49
   magSize: 60
   fireRate: 600
-  reloadTime: 2
+  reloadTime: 3
   reloading: 0
-  recoil: 10
   mode: 1
   recoilForce: 10
   recoilRotation: 2

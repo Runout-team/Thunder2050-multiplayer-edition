@@ -1869,26 +1869,6 @@ MonoBehaviour:
   DefaultGravity: -50
   CrouchJumpHeight: 0.5
   DefaultJumpHeight: 1
---- !u!114 &844058537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5217380017949452921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36b5706cc6e349945947f6529d3ad3ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 3000612191855874781}
-  xSensitivity: 50
-  ySensitivity: 50
-  swaySmooth: 8
-  swayMultiplier: 2
-  idleSwayAmount: 0.5
-  idleSwaySpeed: 1
-  WeaponHolder: {fileID: 2138236951}
 --- !u!1001 &846241176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4641,3 +4621,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d092c5c4f7b784999b7bbe94cc45b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5217380017949452927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5217380017949452921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f601baa5eb66546b2415cfee510ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 3000612191855874781}
+  xSensitivity: 5
+  ySensitivity: 5
+  WeaponHolder: {fileID: 2138236951}
+  portName: COM12
+  baudRate: 115200
+  swaySmooth: 8

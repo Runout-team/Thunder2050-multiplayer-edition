@@ -14,17 +14,16 @@ public class GunData : ScriptableObject
     public float fireRate;
     public float reloadTime;
     public bool reloading;
-    public float recoil;
 
     public enum ModeOptions
     {
         Safe,
         SemiAuto,
-        FullAuto
+        FullAuto,
+        Binary
     }
 
     public ModeOptions mode;
-
     public float recoilForce;
     public float recoilRotation;
     public float recoilDuration;

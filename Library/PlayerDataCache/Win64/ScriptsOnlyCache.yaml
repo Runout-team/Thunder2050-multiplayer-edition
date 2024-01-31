@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - LoginAS
     - MainMenu
     - PlayerLook
+    - PlayerLook_mpu6050
     - PlayerMotor
     - PlayerShoot
     Unity.InputSystem.dll:
@@ -30,10 +31,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -121,37 +120,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1732}
+      Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2276}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3322}
-    - Class: 114
-      Script: {instanceID: 4496}
+      Script: {instanceID: 3332}
     - Class: 114
       Script: {instanceID: 4510}
     - Class: 114
-      Script: {instanceID: 4812}
+      Script: {instanceID: 4524}
     - Class: 114
-      Script: {instanceID: 5408}
+      Script: {instanceID: 4826}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 5422}
     - Class: 114
-      Script: {instanceID: 5548}
+      Script: {instanceID: 5552}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 5562}
     - Class: 114
-      Script: {instanceID: 6300}
+      Script: {instanceID: 5656}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6484}
+    - Class: 114
+      Script: {instanceID: 6860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,6 +166,10 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -200,37 +203,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 2018}
+      Script: {instanceID: 1686}
     - Class: 114
-      Script: {instanceID: 2568}
+      Script: {instanceID: 2026}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2576}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3716}
+      Script: {instanceID: 3332}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 3728}
     - Class: 114
-      Script: {instanceID: 4456}
+      Script: {instanceID: 4116}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 4470}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5656}
     - Class: 114
-      Script: {instanceID: 6300}
+      Script: {instanceID: 5988}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6484}
     - Class: 114
-      Script: {instanceID: 7284}
+      Script: {instanceID: 6860}
     - Class: 114
-      Script: {instanceID: 8566}
+      Script: {instanceID: 7298}
+    - Class: 114
+      Script: {instanceID: 8580}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -271,27 +276,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3332}
     - Class: 114
-      Script: {instanceID: 5548}
+      Script: {instanceID: 3702}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 6300}
+      Script: {instanceID: 5562}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 5656}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 26782}
+      Script: {instanceID: 6484}
     - Class: 114
-      Script: {instanceID: 27450}
+      Script: {instanceID: 6860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -327,6 +332,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem
     className: PlayerInput
+  - hash:
+      serializedVersion: 2
+      Hash: c4591de1453b2d9b69d205e893fc99da
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerLook_mpu6050
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -383,7 +394,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 7abf557e42075cd2f9eb50d9c5e23b3e
+      Hash: 60ef1cf495a8da589cc8edb947e4dc3f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunData
@@ -489,6 +500,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 5f2cdf9c72d02d439508ab173d3d8cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mpu6050
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -629,6 +646,12 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: b747dd1789e45d2240d09730d74ba0d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoginAS
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -663,6 +686,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionExit2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b50edf46b4fcb20a3e5aeffed3ab2743
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -911,7 +940,7 @@ ScriptsOnlyBuild:
     className: GlobalMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0688e4c5a3f882fe6fd9aa8eb7755e83
+      Hash: f4e04cef92f67e2832f2b37f2dc23e7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Loading
@@ -1335,21 +1364,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: b747dd1789e45d2240d09730d74ba0d4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LoginAS
-  - hash:
-      serializedVersion: 2
-      Hash: b50edf46b4fcb20a3e5aeffed3ab2743
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/Landing.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/sansw/Documents/Thunder20505test build 7/Thunder 2050 (Testing).exe
+  playerPath: C:/Users/sansw/Desktop/Thunder2050test build 9/Thunder2050 multiplayer
+    edition.exe

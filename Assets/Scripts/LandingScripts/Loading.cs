@@ -16,29 +16,53 @@ public class Loading : MonoBehaviour
     public GameObject LoginPanel;
     public GameObject LButton;
 
+    public GameObject Loadpanel;
+
+    public GameObject Introvideopanel;
+
+
     void Start()
     {
         LButton.GetComponent<Button>().onClick.AddListener(delegate() { loggin(); });
 
+        StartCoroutine(Waitforintro());
+    }
+
+    IEnumerator Waitforintro() {
+        yield return new WaitForSeconds(10.5f);
+
+        Introvideopanel.SetActive(false);
+        Loadpanel.SetActive(true);
         checkaccount();
     }
 
     void checkaccount() {
         StatusMessage.text = "checking account...";
-        if (!PlayerPrefs.HasKey("id")) {
-            PlayerPrefs.SetString("id", "");
-            PlayerPrefs.Save();
-        }
-        if (!PlayerPrefs.HasKey("session")) {
-            PlayerPrefs.SetString("session", "");
-            PlayerPrefs.Save();
-        } 
-        string session = PlayerPrefs.GetString("session");
-        if (session == "") {
-            LoginPanel.SetActive(true);
-        } else {
-            StartCoroutine(Getinfo(session));
-        }
+        //if (!PlayerPrefs.HasKey("id")) {
+        //    PlayerPrefs.SetString("id", "");
+        //    PlayerPrefs.Save();
+        //}
+        //if (!PlayerPrefs.HasKey("session")) {
+        //    PlayerPrefs.SetString("session", "");
+        //    PlayerPrefs.Save();
+        //} 
+
+        // bypass for open source
+        PlayerPrefs.SetString("session", "abcdefghijklmnopqrstuvwxyz1234567890");
+        PlayerPrefs.SetString("id", "1234567890");
+        PlayerPrefs.SetString("username", "dev");
+        PlayerPrefs.Save();
+
+        Startloadscene();
+
+        //string session = PlayerPrefs.GetString("session");
+        //if (session == "") {
+        //    LoginPanel.SetActive(true);
+        //} else {
+        //    StartCoroutine(Getinfo(session));
+        //}
+
+        
     }
     void Startloadscene() {
         ProgressBarObj.SetActive(true);
@@ -69,9 +93,9 @@ public class Loading : MonoBehaviour
     }
 
     IEnumerator Login(string username, string password) {
-        StatusMessage.text = "login to DPCloud";
-        // login to DPCloud
-        UnityWebRequest request = new UnityWebRequest("https://api.damp11113dev.tk/account/v2/login", "POST");
+        StatusMessage.text = "login to Your System";
+        // login to Your System
+        UnityWebRequest request = new UnityWebRequest("https://api.yourwebsite.com/login", "POST");
         string json = @"{
             'username':'world', 
             'password':'bar'
@@ -121,8 +145,7 @@ public class Loading : MonoBehaviour
     }
     IEnumerator Getinfo(string session) {
         StatusMessage.text = "Getting info player";
-        // login to DPCloud
-        UnityWebRequest request = new UnityWebRequest("https://api.damp11113dev.tk/account/v2/info", "POST");
+        UnityWebRequest request = new UnityWebRequest("https://api.yourwebsite.com/info", "POST");
         string json = @"{
             'username':'world', 
             'password':'bar'

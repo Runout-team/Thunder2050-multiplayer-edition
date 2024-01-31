@@ -1,7 +1,15 @@
-# Thunder2050 multiplayer edition
-this edition is no any story. In this version of Thunder-2050, the emphasis is on the cross platform (e.g. Android <-> IOS <-> PC).
+## About
 
-# How to play
-1. goto https://dashboard.damp11113.xyz/register for register new DPCloud account
-2. open the game and insert your username and password
-3. enjoy
+Why this game is open source because the developer doesn't have time for develop this project from 2024/7/1 - present for this thing i think "Time to open source this project for prototype of FPS game".
+
+## Getting Started
+
+1. clone this repo
+2. download unity 2021.3.14f1
+3. open this project by going to unity hub and click **Open** and then select game project folder and waiting for loading assets and done!
+
+If not working. this project is work on my machine! (this is meme)
+
+## License
+
+This project is licensed under the **GPLv3** - see the [LICENSE.md](LICENSE.md) file for details.

@@ -1,6 +1,6 @@
 ## About
 
-Why this game is open source because the developer doesn't have time for develop this project from 2024/7/1 - present for this thing i think "Time to open source this project for prototype for every FPS game".
+Why this game is open source because the developer doesn't have time for develop this project from 2023/7/1 - present for this thing i think "Time to open source this project for prototype for every FPS game".
 
 ## Getting Started
 

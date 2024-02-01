@@ -12,4 +12,4 @@ If not working. this project is work on my machine! (this is meme)
 
 ## License
 
-This project is licensed under the **GPLv3** - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the **GPLv3** - see the [LICENSE.md](LICENSE) file for details.
